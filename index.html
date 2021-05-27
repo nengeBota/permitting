@@ -1,0 +1,290 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/fee4c24b54.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="main.css">
+        <title>Application Forms</title>
+
+        <script>
+            // function showlistA() {
+            //     var
+            // }
+        </script>
+    </head>
+
+    <body>
+        <main>
+            <img src="./images/logo.png" alt="Petroleum Commission Logo">
+
+            <form class="form-input blur">
+                <h1>PART ONE: CORPORATE STRUCTURE & SERVICES</h1>
+                <div class="row">
+                    <label for="name" class="col-25">Name of Applicant (as indicated on Certificate of
+                        Incorporation)</label>
+                    <input type="text" class="col-75" id="name" required>
+                </div>
+
+                <div class="row">
+                    <label for="name" class="col-25">Date of Incorporation</label>
+                    <input type="date" class="col-75" id="Date" required>
+                </div>
+
+                <div class="row">
+                    <label for="Contact" class="col-25">Contact Details</label>
+                    <input type="text" id="street" placeholder="street address" class="contactcol-75">
+                    <input type="text" id="postal" placeholder="postal address" class="contactcol-75">
+                    <input type="email" id="email" placeholder="email" class="contactcol-75">
+                    <input type="url" id="website" placeholder="https://mywebsite.com" class="contactcol-75">
+                    <input type="text" id="Cperson" placeholder="Contact Person" class="contactcol-75">
+                    <input type="tel" id="phone" placeholder="+233xx-xxx-xxxx" class="contactcol-75">
+                </div>
+                
+                <div class="row space">
+                    <label for="name" class="col-25">Name of Subsidiary or Affiliate (if applicable)</label>
+                    <input type="text" id="name" class="col-75">
+                </div>
+
+                <div class="row">
+                    <label for="name" class="col-25">Nationality of Parent Company or Affiliate (if applicable)</label>
+                    <input type="text" id="name" class="col-75">
+                </div>
+
+                <div class="row space">
+                    <label for="corporate_structure" class="col-25">Provide an outline of the corporate structure,
+                        including an explanatory diagram, if
+                        appropriate, showing parent, subsidiary and affiliate companies (if applicable).</label>
+                    <input type="file" id="file" /><label for="file" class="upload-button"><i class="fas fa-upload"></i>
+                        Choose a file</label>
+                </div>
+
+                
+                <table>
+                    <caption>LIST OF INDIVIDUALS/ COMPANIES WITH SHARES IN THE APPLICANT COMPANY</caption>
+                    <tr>
+                        <th>Name of Shareholder</th>
+                        <th>Address</th>
+                        <th>Nationality</th>
+                        <th>Percentage share in company</th>
+                    </tr>
+                    <tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    </tr>
+                </table>
+
+
+                <table>
+                    <caption>BENEFICIAL OWNERSHIP: IF SHAREHOLDERS ABOVE ARE COMPANIES, LIST ALL THE ACTUAL BENEFICIAL OWNERS
+                    </caption>
+                    <tr>
+                        <th>Name of Shareholder</th>
+                        <th>Address</th>
+                        <th>Nationality</th>
+                        <th>Percentage share in company</th>
+                    </tr>
+                    <tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    </tr>
+                </table>
+
+
+                <table>
+                    <caption>LIST EXECUTIVE DIRECTORS & SENIOR MANAGEMENT TEAM OF THE COMPANY</caption>
+                    <tr>
+                        <th>Namer</th>
+                        <th>Occupation</th>
+                        <th>Nationality</th>
+                        <th>Position in company</th>
+                    </tr>
+                    <tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    </tr>
+                </table>
+
+                <div>
+                    <h2>Category of Permit applied for</h2>
+                    <label for="specialized">Specialized: </label><input type="checkbox" id="special"
+                        onchange="showlistA()">
+                    <label for="General">General: </label><input type="checkbox" id="gen" onchange="showlistB()">
+                </div>
+
+                <fieldset id="special-list">
+                    <legend>Indicate at most two activities in order of preference from the Commission’s Classification
+                        Of Upstream Petroleum Industry Companies list </legend>
+
+                    <div class=" row">
+                        <div class="columns">
+                            <input type="checkbox" id="aviation">
+                            <label for="aviation"> Aviation Support Services </label><br>
+
+                            <input type="checkbox" id="Calibration">
+                            <label for="Calibration"> Calibration Services</label><br>
+
+                            <input type="checkbox" id="data-measure">
+                            <label for="data-measure"> Data Measurement Services</label><br>
+
+                            <input type="checkbox" id="diving&hyperbaric">
+                            <label for="diving&Hyperbaric"> Diving and Hyperbaric Services</label><br>
+
+                            <input type="checkbox" id="dredging">
+                            <label for="dredging"> Dredging Services</label><br>
+
+                            <input type="checkbox" id="Drilling_production">
+                            <label for="Drilling/production"> Drilling/Production Services</label><br>
+
+                            <input type="checkbox" id="Environmental">
+                            <label for="Environmental"> Environmental Services</label><br>
+                        </div>
+
+                        <div class="columns">
+                            <input type="checkbox" id="Exploration">
+                            <label for="Exploration"> Exploration Services</label><br>
+
+                            <input type="checkbox" id="Installation&Marine">
+                            <label for="Installation&Marine"> Installation Services/ Marine Contracting</label><br>
+
+                            <input type="checkbox" id="Integrated">
+                            <label for="Integrated"> Integrated Services</label><br>
+
+                            <input type="checkbox" id="intergrity_test&inspect">
+                            <label for="intergrity_test&inspect"> Integrity Test and Inspection Services</label><br>
+
+                            <input type="checkbox" id="Laboratory">
+                            <label for="Laboratory"> Laboratory Services</label><br>
+
+                            <input type="checkbox" id="Construction">
+                            <label for="Construction"> Major Construction Services</label><br>
+
+                            <input type="checkbox" id="marine_support">
+                            <label for="marine_support"> Marine Support Services</label><br>
+                        </div>
+
+                        <div class="columns">
+                            <input type="checkbox" id="Pipeline">
+                            <label for="Pipeline"> Onshore/Offshore Pipeline Services</label><br>
+
+                            <input type="checkbox" id="R&D">
+                            <label for="R&D"> Research and Development Services</label><br>
+
+                            <input type="checkbox" id="Rope">
+                            <label for="Rope"> Rope Access</label><br>
+
+                            <input type="checkbox" id="specialT">
+                            <label for="specialT"> Special Transportation</label><br>
+
+                            <input type="checkbox" id="Surveying/Positioning ">
+                            <label for="Surveying/Positioning "> Surveying/Positioning Services</label><br>
+
+                            <input type="checkbox" id="Technical">
+                            <label for="Technical"> Technical Consultancy</label><br>
+
+                            <input type="checkbox" id="Waste">
+                            <label for="Waste"> Waste Management Services</label><br>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset id="gen-list">
+                    <legend>Indicate at most two activities in order of preference from the Commission’s Classification
+                        Of Upstream Petroleum Industry Companies list </legend>
+
+                    <div class=" row">
+                        <div class="columns">
+                            <input type="checkbox" id="Automobile">
+                            <label for="Automobile"> AutomobileServices </label><br>
+
+                            <input type="checkbox" id=" Banking/Financial">
+                            <label for=" Banking/Financial"> Banking/Financial Services</label><br>
+
+                            <input type="checkbox" id="construction-rehab-fabric">
+                            <label for="construction-rehab-fabric"> Construction/ Rehabilitation/ Fabrication
+                                Works</label><br>
+
+                            <input type="checkbox" id="Equipment/Materialc">
+                            <label for="Equipment/Material"> Equipment/ Material Supply Services</label><br>
+
+                            <input type="checkbox" id="Gen-consult">
+                            <label for="Gen-consult"> General Consultancy Services</label><br>
+
+                            <input type="checkbox" id="Freight">
+                            <label for="Freight"> Haulage/ Freight / Clearing and Forwarding
+                                (International/ Domestic)</label><br>
+
+                            <input type="checkbox" id="heavy-duty">
+                            <label for="heavy-duty"> Heavy Duty Equipment Supply</label><br>
+                        </div>
+
+                        <div class="columns">
+                        <input type="checkbox" id=" Hospital_Medical">
+                        <label for=" Hospital_Medical"> Hospital/ Medical Services</label><br>
+
+                        <input type="checkbox" id="Hospitality">
+                        <label for="Hospitality"> Hospitality Services</label><br>
+
+                        <input type="checkbox" id="ICT">
+                        <label for="ICT"> Information Technology/ Communication Services</label><br>
+
+                        <input type="checkbox" id="Insurance">
+                        <label for="Insurance"> Insurance Service</label><br>
+
+                        <input type="checkbox" id="Manpower ">
+                        <label for="Manpower "> Manpower Supply</label><br>
+
+                        <input type="checkbox" id="Maintenance">
+                        <label for="Maintenance"> Maintenance</label><br>
+
+                        <input type="checkbox" id="Printing">
+                        <label for="Printing"> Printing Services</label><br>
+                    </div>
+
+                    <div class="columns">
+                        <input type="checkbox" id="protocol&log">
+                        <label for="protocol&log"> Protocol and Logistics Services</label><br>
+
+                        <input type="checkbox" id="Sanitation">
+                        <label for="Sanitation"> Sanitation</label><br>
+
+                        <input type="checkbox" id="Petroleum_Products">
+                        <label for="Petroleum Products"> Supply of Petroleum Products</label><br>
+
+                        <input type="checkbox" id="Supply ">
+                        <label for="Supply "> Supply</label><br>
+
+                        <input type="checkbox" id="boreholes">
+                        <label for="boreholes"> Water Borehole Services</label><br>
+
+                        <input type="checkbox" id="Works">
+                        <label for="Works"> Works</label><br>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <div class="row">
+                    <label for="description" class="col-25">Provide a description of the range of activities applicant
+                        proposes to
+                        undertake in relation to above</label>
+                    <textarea id="description" placeholder="Enter description here...."></textarea>
+                </div>
+
+                <button><a href="page2.html" > Next <i class="fas fa-angle-double-right"></i></a></button>
+
+            </form>
+
+        </main>
+    </body>
+
+</html>

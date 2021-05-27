@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Newsreader", serif;
+}
+
+main {
+  background: linear-gradient(to right top, #041e42, #a2c3f1);
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  max-width: 75%;
+  height: auto;
+}
+
+h1, h3,
+h4 {
+  padding: 10px;
+  text-align: center;
+}
+h1{
+  color:#8d6e2a;
+  text-shadow: 2px 2px black;
+  font-size: 35px;
+}
+
+h2 {
+  padding: 5px;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+h5{
+  font-size: large;
+}
+hr{
+  margin: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.form-input {
+  width: 80%;
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 20px 50px 20px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border-radius: 1rem; */
+  backdrop-filter: blur (100rem);
+}
+
+
+[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+[type="file"] + label {
+  font-size: 25px;
+  color: black;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 140px;
+  padding: 10px;
+}
+
+[type="file"] :focus + label,
+[type="file"] + label:hover {
+  background-color: #041e42;
+  color: #91b6e9;
+}
+
+caption{
+  text-transform: uppercase;
+}
+table {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+td,
+th {
+  border: 1px solid #041e42;
+  text-align: left;
+  padding: 5px;
+}
+
+tr ::nth-child(even) {
+  background-color: #91b6e9;
+}
+
+.col-25 {
+  float: left;
+  width: 35%;
+  margin-right: 5%;
+  margin-top: 6px;
+}
+
+.col-75,
+textarea {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 10px;
+}
+input, textarea{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contactcol-75 {
+  margin-left: 40%;
+  width: 50%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.space {
+  margin-top: 25px;
+}
+
+fieldset {
+  width: 90%;
+  background-color: whitesmoke;
+  padding: 25px;
+  border: 10px groove (internal value);
+  margin-bottom: 15px;
+  border-radius: inherit;
+}
+
+.columns{
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+
+}
+
+@media screen and (max-width: 600px) {
+  .columns{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+dd {
+  margin-left: 50px;
+}
+
+#strategy, #employment{
+  margin-left: 50px;
+}
+button{
+  background-color: #041e42; 
+  border: none;
+  border-radius: inherit;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+  margin-left: 78%;
+  margin-top: 15px;
+}
+
+button:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
