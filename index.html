@@ -11,9 +11,17 @@
         <title>Application Forms</title>
 
         <script>
-            // function showlistA() {
-            //     var
-            // }
+            function showlist(num) {
+                if (num == 1) {
+                    document.getElementById("special-list").style.display = "block";
+                    document.getElementById("gen-list").style.display = "none";
+                }
+                if (num == 2) {
+                    document.getElementById("gen-list").style.display = "block";
+                    document.getElementById("special-list").style.display = "none";
+                }
+
+            }
         </script>
     </head>
 
@@ -43,7 +51,7 @@
                     <input type="text" id="Cperson" placeholder="Contact Person" class="contactcol-75">
                     <input type="tel" id="phone" placeholder="+233xx-xxx-xxxx" class="contactcol-75">
                 </div>
-                
+
                 <div class="row space">
                     <label for="name" class="col-25">Name of Subsidiary or Affiliate (if applicable)</label>
                     <input type="text" id="name" class="col-75">
@@ -58,11 +66,11 @@
                     <label for="corporate_structure" class="col-25">Provide an outline of the corporate structure,
                         including an explanatory diagram, if
                         appropriate, showing parent, subsidiary and affiliate companies (if applicable).</label>
-                    <input type="file" id="file" /><label for="file" class="upload-button"><i class="fas fa-upload"></i>
+                    <input type="file" id="file" /><label for="file"><i class="fas fa-upload"></i>
                         Choose a file</label>
                 </div>
 
-                
+
                 <table>
                     <caption>LIST OF INDIVIDUALS/ COMPANIES WITH SHARES IN THE APPLICANT COMPANY</caption>
                     <tr>
@@ -81,7 +89,8 @@
 
 
                 <table>
-                    <caption>BENEFICIAL OWNERSHIP: IF SHAREHOLDERS ABOVE ARE COMPANIES, LIST ALL THE ACTUAL BENEFICIAL OWNERS
+                    <caption>BENEFICIAL OWNERSHIP: IF SHAREHOLDERS ABOVE ARE COMPANIES, LIST ALL THE ACTUAL BENEFICIAL
+                        OWNERS
                     </caption>
                     <tr>
                         <th>Name of Shareholder</th>
@@ -101,7 +110,7 @@
                 <table>
                     <caption>LIST EXECUTIVE DIRECTORS & SENIOR MANAGEMENT TEAM OF THE COMPANY</caption>
                     <tr>
-                        <th>Namer</th>
+                        <th>Name</th>
                         <th>Occupation</th>
                         <th>Nationality</th>
                         <th>Position in company</th>
@@ -116,12 +125,12 @@
 
                 <div>
                     <h2>Category of Permit applied for</h2>
-                    <label for="specialized">Specialized: </label><input type="checkbox" id="special"
-                        onchange="showlistA()">
-                    <label for="General">General: </label><input type="checkbox" id="gen" onchange="showlistB()">
+                    <label for="specialized">Specialized: </label><input type="checkbox" id="special" name="permit_cat"
+                        onclick="showlist(1)">
+                    <label for="General">General: </label><input type="checkbox" id="gen" name="permit_cat" onclick="showlist(2)">
                 </div>
 
-                <fieldset id="special-list">
+                <fieldset id="special-list" class="hidden">
                     <legend>Indicate at most two activities in order of preference from the Commission’s Classification
                         Of Upstream Petroleum Industry Companies list </legend>
 
@@ -197,7 +206,7 @@
                     </div>
                 </fieldset>
 
-                <fieldset id="gen-list">
+                <fieldset id="gen-list" class="hidden">
                     <legend>Indicate at most two activities in order of preference from the Commission’s Classification
                         Of Upstream Petroleum Industry Companies list </legend>
 
@@ -228,46 +237,46 @@
                         </div>
 
                         <div class="columns">
-                        <input type="checkbox" id=" Hospital_Medical">
-                        <label for=" Hospital_Medical"> Hospital/ Medical Services</label><br>
+                            <input type="checkbox" id=" Hospital_Medical">
+                            <label for=" Hospital_Medical"> Hospital/ Medical Services</label><br>
 
-                        <input type="checkbox" id="Hospitality">
-                        <label for="Hospitality"> Hospitality Services</label><br>
+                            <input type="checkbox" id="Hospitality">
+                            <label for="Hospitality"> Hospitality Services</label><br>
 
-                        <input type="checkbox" id="ICT">
-                        <label for="ICT"> Information Technology/ Communication Services</label><br>
+                            <input type="checkbox" id="ICT">
+                            <label for="ICT"> Information Technology/ Communication Services</label><br>
 
-                        <input type="checkbox" id="Insurance">
-                        <label for="Insurance"> Insurance Service</label><br>
+                            <input type="checkbox" id="Insurance">
+                            <label for="Insurance"> Insurance Service</label><br>
 
-                        <input type="checkbox" id="Manpower ">
-                        <label for="Manpower "> Manpower Supply</label><br>
+                            <input type="checkbox" id="Manpower ">
+                            <label for="Manpower "> Manpower Supply</label><br>
 
-                        <input type="checkbox" id="Maintenance">
-                        <label for="Maintenance"> Maintenance</label><br>
+                            <input type="checkbox" id="Maintenance">
+                            <label for="Maintenance"> Maintenance</label><br>
 
-                        <input type="checkbox" id="Printing">
-                        <label for="Printing"> Printing Services</label><br>
-                    </div>
+                            <input type="checkbox" id="Printing">
+                            <label for="Printing"> Printing Services</label><br>
+                        </div>
 
-                    <div class="columns">
-                        <input type="checkbox" id="protocol&log">
-                        <label for="protocol&log"> Protocol and Logistics Services</label><br>
+                        <div class="columns">
+                            <input type="checkbox" id="protocol&log">
+                            <label for="protocol&log"> Protocol and Logistics Services</label><br>
 
-                        <input type="checkbox" id="Sanitation">
-                        <label for="Sanitation"> Sanitation</label><br>
+                            <input type="checkbox" id="Sanitation">
+                            <label for="Sanitation"> Sanitation</label><br>
 
-                        <input type="checkbox" id="Petroleum_Products">
-                        <label for="Petroleum Products"> Supply of Petroleum Products</label><br>
+                            <input type="checkbox" id="Petroleum_Products">
+                            <label for="Petroleum Products"> Supply of Petroleum Products</label><br>
 
-                        <input type="checkbox" id="Supply ">
-                        <label for="Supply "> Supply</label><br>
+                            <input type="checkbox" id="Supply ">
+                            <label for="Supply "> Supply</label><br>
 
-                        <input type="checkbox" id="boreholes">
-                        <label for="boreholes"> Water Borehole Services</label><br>
+                            <input type="checkbox" id="boreholes">
+                            <label for="boreholes"> Water Borehole Services</label><br>
 
-                        <input type="checkbox" id="Works">
-                        <label for="Works"> Works</label><br>
+                            <input type="checkbox" id="Works">
+                            <label for="Works"> Works</label><br>
                         </div>
                     </div>
 
@@ -280,7 +289,7 @@
                     <textarea id="description" placeholder="Enter description here...."></textarea>
                 </div>
 
-                <button><a href="page2.html" > Next <i class="fas fa-angle-double-right"></i></a></button>
+                <button><a href="page2.html"> Next <i class="fas fa-angle-double-right"></i></a></button>
 
             </form>
 
