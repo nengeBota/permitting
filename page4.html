@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,17 +7,112 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fee4c24b54.js" crossorigin="anonymous"></script>
+    <script src="fileupload.js"></script>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="fileupload.scss">
     <title>Application Forms</title>
 </head>
+
 <body>
     <main>
         <img src="./images/logo.png" alt="Petroleum Commission Logo">
         <form action="" class="form-input blur">
             <h1> PART FOUR: LOCAL CONTENT </h1>
 
+            <div class="row space">
+                <label for="ghanaian_owners" class="col-25">Provide the percentage of Ghanaian participation in
+                    respect of ownership</label>
+                <input type="text" class="col-75" id="name">
+            </div>
+
+            <table>
+                <caption>Employment: Please provide a breakdown of your company’s staff</caption>
+                <tr>
+                    <th>Positions</th>
+                    <th>Number Of Ghanaians</th>
+                    <th>Number Of Foreigners</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+            </table>
+
+            <div class="row space">
+                <label for="infracturcture" class="col-25">Infrastructural Investments - (The amount of money spent on
+                    infrastructure in Ghana)</label>
+                <input type="text" class="col-75" id="name">
+            </div>
+
+            <h2>Value of Service</h2>
+            <table>
+                <caption>a. Services rendered by other companies to the applicant in the past twelve (12) months in
+                    order
+                    for applicant to operate. (ie. Catering, logistics, etc)</caption>
+                <tr>
+                    <th>Type of Service</th>
+                    <th>Contract Sum </th>
+                    <th>Client Company</th>
+                </tr>
+                <tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+            </table>
+
+            <table>
+                <caption>b. Services rendered by the applicant in the past twelve (12) months to other companies
+                </caption>
+                <tr>
+                    <th>Type of Service</th>
+                    <th>Contract Sum </th>
+                    <th>Client Company</th>
+                </tr>
+                <tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                </tr>
+            </table>
+
+            <div class="row">
+                <label for="description" class="col-25">List raw materials to be utilised (This applies to companies
+                    which use raw materials for their activities</label>
+                <textarea id="description" placeholder="Enter description here...."></textarea>
+            </div>
+
+            <div class="row">
+                <label for="description" class="col-25">List Ghanaian finished goods to be utilised</label>
+                <textarea id="description" placeholder="Enter description here...."></textarea>
+            </div>
+            <hr>
+            <h1> PART FIVE: HEALTH, SAFETY, SECURITY & ENVIRONMENT </h1>
+            <div class="row space">
+                <label for="corporate_structure" class="col-25">Provide a signed copy of the Company’s HSSE Policy and
+                    Objectives</label>
+                <input type="file" id="file" /><label for="file"><i class="fas fa-upload"></i>
+                    Choose a file</label>
+            </div>
+
+            <hr>
+            <h1> PART SIX: MISCELLANEOUS </h1>
+            <div class="file-uploader">
+                <div class="file-uploader__message-area">
+                  <p>Select a file to upload</p>
+                </div>
+                <div class="file-chooser">
+                  <input class="file-chooser__input" type="file" multiple />
+                </div>
+                <!-- <input class="file-uploader__submit-button" type="submit" value="Upload"> -->
+            </div>
         </form>
+
     </main>
 
 </body>
+
 </html>

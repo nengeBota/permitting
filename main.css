@@ -159,6 +159,10 @@ fieldset {
   border-radius: inherit;
 }
 
+.hidden{
+  display: none;
+}
+
 .columns{
   float: left;
   width: 33%;
