@@ -7,9 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Newsreader&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fee4c24b54.js" crossorigin="anonymous"></script>
-    <script src="fileupload.js"></script>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="fileupload.scss">
     <title>Application Forms</title>
 </head>
 
@@ -100,15 +98,32 @@
 
             <hr>
             <h1> PART SIX: MISCELLANEOUS </h1>
-            <div class="file-uploader">
-                <div class="file-uploader__message-area">
-                  <p>Select a file to upload</p>
-                </div>
-                <div class="file-chooser">
-                  <input class="file-chooser__input" type="file" multiple />
-                </div>
-                <!-- <input class="file-uploader__submit-button" type="submit" value="Upload"> -->
-            </div>
+
+            <p>Any other relevant information which applicant wishes to offer or further proposal
+                which applicant seeks to make in relation to this application</p>
+
+            <div><b>Please Note: select all additional documents at once to be attached</b></div>
+
+            <input type="file" id="file" required /><label for="file" class="upload-button"><i
+                    class="fas fa-upload"></i>
+                Choose a file</label>
+            <p><b>According to Regulation 46 (1) & (2) of the Petroleum (Local Content and Local Participation)
+                    Regulations: </b></p>
+            <p>(1) A person who submits a plan, returns, report or other document and knowingly makes a false
+                statement, commits an offence and is liable on summary conviction to a fine of not less than one hundred
+                thousand penalty units and not more than two hundred and fifty thousand penalty units or to a term of
+                imprisonment of not less than two years and not more than five years or to both.
+            </p>
+            <p>(2) A citizen who acts as a front or connives with a foreign citizen or company to deceive the
+                Commission as representing an indigenous Ghanaian company to achieve the local content requirement under
+                these Regulations, commits an offence and is liable on summary conviction to a fine of not less than one
+                hundred thousand penalty units and not more than two hundred and fifty thousand penalty units or to a
+                term of imprisonment of not less than one year and not more than two years or to both.
+            </p>
+
+
+            <button><a href="declaration.html"> Next <i class="fas fa-angle-double-right"></i></a></button>
+
         </form>
 
     </main>
