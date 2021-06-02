@@ -110,3 +110,10 @@ ul, li {
   margin: 0;
   padding: 0;
 }
+
+#sig-canvas {
+  border: 2px dotted #CCCCCC;
+  border-radius: 15px;
+  cursor: crosshair;
+}
+

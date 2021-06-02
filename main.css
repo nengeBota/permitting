@@ -58,7 +58,8 @@ h5 {
   margin-bottom: 5px;
 }
 
-p, label{
+p,
+label {
   text-align: justify;
   text-justify: inter-word;
   line-height: 20px;
@@ -69,7 +70,7 @@ hr {
   margin: 10px;
 }
 
-b{
+b {
   margin-left: 35px;
   text-align: center;
   font-size: 20px;
@@ -92,7 +93,6 @@ a {
   /* border-radius: 1rem; */
   backdrop-filter: blur (100rem);
 }
-
 
 [type="file"] {
   width: 0.1px;
@@ -237,4 +237,13 @@ button {
 
 button:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+li {
+border: 1px solid #041e42;
+width: 70%;
+margin: auto;
+line-height: 50px;
+padding: 10px;
+font:caption;
 }
