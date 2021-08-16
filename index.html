@@ -12,16 +12,71 @@
 
     <script>
         function showlist(num) {
-            if (num == 1) {
-                document.getElementById("special-list").style.display = "block";
-                document.getElementById("gen-list").style.display = "none";
-            }
-            if (num == 2) {
-                document.getElementById("gen-list").style.display = "block";
-                document.getElementById("special-list").style.display = "none";
-            }
+          // if the currently clicked checkbox is active, 
+                // deactivate the other checkbox
+                // show the current list
+                // hide the other list
+          //else hide the current list
+          
+          let currentSection = null;
+          let currentCheckbox = null;
+          let otherSection = null;
+          let otherCheckbox = null;
+          
+          if(num === 1){
+            currentSection = document.getElementById("special-list");
+            currentCheckbox = document.getElementById("special");
+            otherSection = document.getElementById("gen-list");
+            otherCheckbox = document.getElementById("gen");
+          }else if(num === 2){
+            currentSection = document.getElementById("gen-list");
+            currentCheckbox = document.getElementById("gen");
+            otherSection = document.getElementById("special-list");
+            otherCheckbox = document.getElementById("special");
+          }
+          
+          
+          if(currentCheckbox.checked){
+            otherCheckbox.checked = false;
+            currentSection.style.display = "block";
+            otherSection.style.display = "none";
+          } else{
+            currentSection.style.display = "none";
+          }
+          
 
+        } 
+      
+      
+     function addrows(tableName){
+       let table_body= document.getElementById(tableName);
+        let rows=table_body.insertRow(-1);
+        let i=0;
+        for(i=0; i<4; i++){
+          let cells= rows.insertCell(i);
+          let input =document.createElement('input');
+          cells.appendChild(input);
         }
+        // create a cell that#ll be at the end of the hrow. store this cell in a var.
+        // create the delete text that#ll be placed within this new cell
+        // append this delete text that#ll be placed within the cell
+        
+        let delCell=rows.insertCell(i);
+        let delText=document.createTextNode("Delete");
+        delCell.appendChild(delText);
+        delCell.onclick = function(e){delrows(e, tableName)};
+       
+       // the new way , ie. the arrow function: e => delrows(e)
+        
+      }
+      
+      function delrows(e, tableName){
+        const rowIndex = e.target.parentElement.rowIndex;
+        let table_body= document.getElementById(tableName);
+        table_body.deleteRow(rowIndex-1);
+        //console.log("clicked row index ", rowIndex);
+      }
+      
     </script>
 </head>
 
@@ -78,13 +133,12 @@
                     <th>Address</th>
                     <th>Nationality</th>
                     <th>Percentage share in company</th>
+                  <th><button onClick="addrows('table_1')" type="button">
+                    Add
+                    </button></th>
                 </tr>
-                <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
+                <tbody id="table_1">
+              </tbody>
             </table>
 
 
@@ -97,13 +151,11 @@
                     <th>Address</th>
                     <th>Nationality</th>
                     <th>Percentage share in company</th>
+                <th><button onClick="addrows('table_2')" type="button">
+                    Add
+                    </button></th>
                 </tr>
-                <tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                </tr>
+              <tbody id="table_2"></tbody>
             </table>
 
 
@@ -114,13 +166,11 @@
                     <th>Occupation</th>
                     <th>Nationality</th>
                     <th>Position in company</th>
+                <th><button onClick="addrows('table_3')" type="button">
+                    Add
+                    </button></th>
                 </tr>
-                <tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                <tr></tr>
-                </tr>
+              <tbody id="table_3"></tbody>
             </table>
 
             <div>
